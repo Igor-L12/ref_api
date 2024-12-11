@@ -1,0 +1,14 @@
+{% extends "base.html" %} {% block title %} Код {% endblock %} {% block content %}
+<form method="POST" >
+    {% csrf_token %}
+    <div>
+        <label for="phone_number">Номер</label>
+        <input type="text" id="phone_number" name="phone_number" placeholder="Введите номер" required />
+    </div>
+    <div>
+        <button type="submit">
+            Войти
+        </button>
+    </div>
+</form>
+{% endblock %}

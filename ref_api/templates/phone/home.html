@@ -1,0 +1,17 @@
+{% extends "base.html" %} {% block title %} Код {% endblock %} {% block content %}
+Вход выполнен успешно
+Ваш номер — {{ phone_number }}
+Ваша реферальная ссылка — {{ invite_code }}
+<form method="POST">
+    {% csrf_token %}
+    <div>
+        <label for="friend_code">Введите инвайт-код</label>
+        <input type="text" id="friend_code" name="friend_code" placeholder="Код" required />
+    </div>
+    <div>
+        <button type="submit">
+            Сохранить
+        </button>
+    </div>
+</form>
+{% endblock %}
